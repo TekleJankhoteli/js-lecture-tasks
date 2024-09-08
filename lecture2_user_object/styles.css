@@ -1,0 +1,62 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: rgb(234, 224, 224);
+}
+
+main {
+  position: relative;
+  background-color: rgb(248, 239, 239);
+}
+.online {
+  position: absolute;
+  right: 0;
+  border-radius: 50%;
+  display: inline-block;
+
+  width: 20px;
+  height: 20px;
+  background-color: rgb(120, 229, 120);
+}
+.containerForInfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+h1 {
+  letter-spacing: 2px;
+  font-style: italic;
+  color: rgb(160, 160, 65);
+}
+h2 {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 30px;
+  color: rgb(160, 160, 65);
+}
+button {
+  padding: 15px 30px;
+  margin-bottom: 30px;
+  border: none;
+  background-color: rgb(234, 234, 219);
+  color: rgb(160, 160, 65);
+  font-weight: bold;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+.userFollowInfo {
+  display: flex;
+  gap: 80px;
+  margin-bottom: 40px;
+}
+
+.userFollowInfo span {
+  color: rgb(160, 160, 65);
+}
