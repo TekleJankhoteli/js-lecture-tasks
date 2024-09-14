@@ -8,24 +8,31 @@ let weight = document.getElementById("weight");
 let stockInfo = document.getElementById("stockInfo");
 let price = document.getElementById("price");
 
-let productObject = {
-  productNameis: "Glass",
-  weight: 50,
-  stock: 0,
-  price: 35,
-  img: "https://m.media-amazon.com/images/I/71+tPqPzSXL.jpg",
-
-  checkingStock() {
-    if (productObject.stock > 0) {
-      stockInfo.innerHTML = productObject.stock;
+function ObjectConstructor(name, weight, stock, price, img) {
+  this.productNameis = name;
+  this.weight = weight;
+  this.stock = stock;
+  this.price = price;
+  this.imgUrl = img;
+  this.checkingStock = function () {
+    if (this.stock > 0) {
+      stockInfo.innerHTML = this.stock;
     } else {
       stockInfo.innerHTML = "Out of stock";
     }
-  },
-};
-productObject.checkingStock();
+  };
+}
 
-img.src = productObject.img;
+const productObject = new ObjectConstructor(
+  "Glass",
+  20,
+  50,
+  35,
+  "https://m.media-amazon.com/images/I/71+tPqPzSXL.jpg"
+);
+
+img.src = productObject.imgUrl;
 productName.innerHTML = productObject.productNameis;
 weight.innerHTML = `weight: ${productObject.weight}`;
 price.innerHTML = `price: ${productObject.price}`;
+productObject.checkingStock();
