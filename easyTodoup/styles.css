@@ -1,0 +1,12 @@
+#mainButton {
+  border: none;
+  background-color: rgb(31, 179, 228);
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
